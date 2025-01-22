@@ -18,6 +18,8 @@ class Admin : WithSelectorActivity() {
         val deleteUserButton: Button = findViewById(R.id.delete_user_button)
         val mapTrainingButton: Button = findViewById(R.id.map_training_button)
         val showUserTrainingsButton: Button = findViewById(R.id.show_user_trainings_button)
+        val showTrainingMappingButton: Button = findViewById(R.id.show_training_mapping_button)
+        val addTrainingMappingButton: Button = findViewById(R.id.add_training_mapping_button)
 
 
         createUserButton.setOnClickListener {
@@ -37,6 +39,16 @@ class Admin : WithSelectorActivity() {
         deleteUserButton.setOnClickListener {
             val intent = Intent(this, UserSelectorActivity::class.java)
             deleteUserLauncher.launch(intent)
+        }
+
+        showTrainingMappingButton.setOnClickListener {
+            val intent = Intent(this, ShowTrainingMappingActivity::class.java)
+            startActivity(intent)
+        }
+
+        addTrainingMappingButton.setOnClickListener {
+            val intent = Intent(this, AddTrainingMappingActivity::class.java)
+            startActivity(intent)
         }
     }
 }

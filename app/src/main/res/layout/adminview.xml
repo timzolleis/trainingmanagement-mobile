@@ -40,4 +40,18 @@
             android:layout_height="wrap_content"
             android:text="Show User Trainings"
             android:layout_marginBottom="16dp"/>
+
+    <Button
+            android:id="@+id/show_training_mapping_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Training Mapping"
+            android:layout_marginBottom="16dp"/>
+
+    <Button
+            android:id="@+id/add_training_mapping_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Training Mapping"
+            android:layout_marginBottom="16dp"/>
 </LinearLayout>

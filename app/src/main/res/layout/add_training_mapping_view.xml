@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/training_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:spinnerMode="dropdown" />
+
+    <Switch
+        android:id="@+id/attended_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Attended"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/add_training_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Training Mapping" />
+
+</LinearLayout>
