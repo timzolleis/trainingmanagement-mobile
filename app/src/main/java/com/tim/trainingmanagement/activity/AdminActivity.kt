@@ -17,5 +17,9 @@ class AdminActivity: AppCompatActivity() {
         val mapTrainingButton: Button = findViewById(R.id.map_training_button)
         val showUserTrainingsButton: Button = findViewById(R.id.show_user_trainings_button)
 
+        createUserButton.setOnClickListener {
+            val intent = Intent(this, CreateUserActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
