@@ -21,5 +21,15 @@ class AdminActivity: AppCompatActivity() {
             val intent = Intent(this, CreateUserActivity::class.java)
             startActivity(intent)
         }
+
+        editUserButton.setOnClickListener {
+            val intent = Intent(this, EditUserActivity::class.java)
+            startActivity(intent)
+        }
+
+        deleteUserButton.setOnClickListener {
+            val intent = Intent(this, DeleteUserActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
