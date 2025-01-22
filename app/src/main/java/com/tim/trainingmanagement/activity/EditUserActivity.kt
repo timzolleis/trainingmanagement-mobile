@@ -24,6 +24,9 @@ class EditUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_user_view)
         val username = intent.getStringExtra("username")
+        val isAdminEdit = intent.getBooleanExtra("isAdmin", true)
+
+
         val existingClerk = Clerk.getClerk(username)
         usernameEditText = findViewById(R.id.username)
         usernameEditText.setText(existingClerk.username.toString())
@@ -31,6 +34,7 @@ class EditUserActivity : AppCompatActivity() {
         passwordEditText.setText(existingClerk.password.toString())
         roleSpinner = findViewById(R.id.role)
         roleSpinner.setSelection(if (existingClerk.isAdmin) 0 else 1)
+        roleSpinner.isEnabled = isAdminEdit
         editUserButton = findViewById(R.id.edit_user_button)
         cancelButton = findViewById(R.id.cancel_button)
 

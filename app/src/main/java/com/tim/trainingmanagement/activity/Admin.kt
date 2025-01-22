@@ -29,6 +29,7 @@ class Admin : WithSelectorActivity() {
 
         editUserButton.setOnClickListener {
             val intent = Intent(this, UserSelectorActivity::class.java)
+            intent.putExtra("isAdmin", false)
             editUserLauncher.launch(intent)
         }
 

@@ -15,6 +15,16 @@ abstract class WithSelectorActivity: AppCompatActivity() {
                 if (username != null) {
                     val intent = Intent(this, targetActivity)
                     intent.putExtra("username", username)
+                    result.data?.extras?.let { extras ->
+                        for (key in extras.keySet()) {
+                            val value = extras.get(key)
+                            when (value) {
+                                is String -> intent.putExtra(key, value)
+                                is Int -> intent.putExtra(key, value)
+                                is Boolean -> intent.putExtra(key, value)
+                            }
+                        }
+                    }
                     startActivity(intent)
                 }
             }
