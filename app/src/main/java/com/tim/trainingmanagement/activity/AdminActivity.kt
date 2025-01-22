@@ -17,29 +17,5 @@ class AdminActivity: AppCompatActivity() {
         val mapTrainingButton: Button = findViewById(R.id.map_training_button)
         val showUserTrainingsButton: Button = findViewById(R.id.show_user_trainings_button)
 
-        createUserButton.setOnClickListener {
-            val intent = Intent(this, CreateUserActivity::class.java)
-            startActivity(intent)
-        }
-
-        editUserButton.setOnClickListener {
-            val intent = Intent(this, EditUserActivity::class.java)
-            startActivity(intent)
-        }
-
-        deleteUserButton.setOnClickListener {
-            val intent = Intent(this, DeleteUserActivity::class.java)
-            startActivity(intent)
-        }
-
-        mapTrainingButton.setOnClickListener {
-            val intent = Intent(this, MapTrainingActivity::class.java)
-            startActivity(intent)
-        }
-
-        showUserTrainingsButton.setOnClickListener {
-            val intent = Intent(this, ShowUserTrainingsActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

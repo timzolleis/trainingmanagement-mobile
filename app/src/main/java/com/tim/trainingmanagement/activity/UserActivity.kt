@@ -15,19 +15,6 @@ class UserActivity: AppCompatActivity() {
         val mapTrainingButton: Button = findViewById(R.id.map_training_button)
         val showUserTrainingsButton: Button = findViewById(R.id.show_user_trainings_button)
 
-        editUserButton.setOnClickListener {
-            val intent = Intent(this, EditUserActivity::class.java)
-            startActivity(intent)
-        }
 
-        mapTrainingButton.setOnClickListener {
-            val intent = Intent(this, MapTrainingActivity::class.java)
-            startActivity(intent)
-        }
-
-        showUserTrainingsButton.setOnClickListener {
-            val intent = Intent(this, ShowUserTrainingsActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
