@@ -9,9 +9,9 @@ import java.util.regex.Pattern;
 
 @Getter
 public class Clerk {
-    private String username;
-    private String password;
-    private boolean isAdmin;
+    public String username;
+    public String password;
+    public boolean isAdmin;
     private final Map<String, Training> completedTrainings = new HashMap<>();
     private final Map<String, Training> attendedTrainings = new HashMap<>();
     private static final Map<String, Clerk> allClerks = new HashMap<>();

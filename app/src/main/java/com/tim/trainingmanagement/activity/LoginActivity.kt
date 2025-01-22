@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (errorMessage == null) {
             val intent = if (role == "Admin") {
-                Intent(this, AdminActivity::class.java)
+                Intent(this, Admin::class.java)
             } else {
                 Intent(this, UserActivity::class.java)
             }
