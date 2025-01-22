@@ -1,5 +1,6 @@
 package com.tim.trainingmanagement.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -43,7 +44,16 @@ class LoginActivity : AppCompatActivity() {
         loginC.printClerkNames();
         val errorMessage = loginC.login(username, password, role == "Admin")
 
-        // Navigate to the next screen
-        Toast.makeText(this, errorMessage ?: "Login successful", Toast.LENGTH_SHORT).show()
+        if (errorMessage == null) {
+            val intent = if (role == "Admin") {
+                Intent(this, AdminActivity::class.java)
+            } else {
+                Intent(this, UserActivity::class.java)
+            }
+            startActivity(intent)
+            finish()
+        } else {
+            Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+        }
     }
 }

@@ -6,29 +6,17 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.tim.trainingmanagement.R
 
-class AdminActivity: AppCompatActivity() {
+class UserActivity: AppCompatActivity() {
     override fun onCreate(saveInstanceState: Bundle?) {
         super.onCreate(saveInstanceState)
-        setContentView(R.layout.adminview)
+        setContentView(R.layout.userview)
 
-        val createUserButton: Button = findViewById(R.id.create_user_button)
         val editUserButton: Button = findViewById(R.id.edit_user_button)
-        val deleteUserButton: Button = findViewById(R.id.delete_user_button)
         val mapTrainingButton: Button = findViewById(R.id.map_training_button)
         val showUserTrainingsButton: Button = findViewById(R.id.show_user_trainings_button)
 
-        createUserButton.setOnClickListener {
-            val intent = Intent(this, CreateUserActivity::class.java)
-            startActivity(intent)
-        }
-
         editUserButton.setOnClickListener {
             val intent = Intent(this, EditUserActivity::class.java)
-            startActivity(intent)
-        }
-
-        deleteUserButton.setOnClickListener {
-            val intent = Intent(this, DeleteUserActivity::class.java)
             startActivity(intent)
         }
 
