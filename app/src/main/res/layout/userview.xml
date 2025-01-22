@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:padding="16dp">
+    <include layout="@layout/appname"/>
 
     <Button
             android:id="@+id/edit_user_button"
