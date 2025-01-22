@@ -15,17 +15,10 @@
         android:layout_marginBottom="16dp"
         android:spinnerMode="dropdown" />
 
-    <Switch
-        android:id="@+id/completed_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Completed"
-        android:layout_marginBottom="16dp" />
-
     <Button
-        android:id="@+id/add_training_button"
+        android:id="@+id/delete_training_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Training Mapping" />
+        android:text="Delete Training Mapping" />
 
 </LinearLayout>

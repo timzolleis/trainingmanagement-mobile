@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
+        setupClerks();
+        setupTrainings();
         finish()
     }
 }

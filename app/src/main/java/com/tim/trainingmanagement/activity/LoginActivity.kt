@@ -32,8 +32,7 @@ class LoginActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             attemptLogin()
         }
-        setupClerks();
-        setupTrainings();
+
     }
 
     private fun attemptLogin() {
@@ -46,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (errorMessage == null) {
             val intent = if (role == "Admin") {
-                Intent(this, Admin::class.java)
+                Intent(this, AdminActivity::class.java)
             } else {
                 Intent(this, UserActivity::class.java)
             }

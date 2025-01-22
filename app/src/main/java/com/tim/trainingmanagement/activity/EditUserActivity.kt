@@ -24,9 +24,7 @@ class EditUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_user_view)
         val username = intent.getStringExtra("username")
-        val isAdminEdit = intent.getBooleanExtra("isAdmin", true)
-
-
+        val isAdminEdit = intent.getBooleanExtra("isAdmin", false)
         val existingClerk = Clerk.getClerk(username)
         usernameEditText = findViewById(R.id.username)
         usernameEditText.setText(existingClerk.username.toString())

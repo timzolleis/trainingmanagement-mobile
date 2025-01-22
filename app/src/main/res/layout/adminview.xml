@@ -27,19 +27,7 @@
             android:text="Delete User"
             android:layout_marginBottom="16dp"/>
 
-    <Button
-            android:id="@+id/map_training_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Map Training"
-            android:layout_marginBottom="16dp"/>
 
-    <Button
-            android:id="@+id/show_user_trainings_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Show User Trainings"
-            android:layout_marginBottom="16dp"/>
 
     <Button
             android:id="@+id/show_training_mapping_button"
@@ -54,4 +42,12 @@
             android:layout_height="wrap_content"
             android:text="Add Training Mapping"
             android:layout_marginBottom="16dp"/>
+    <Button
+            android:id="@+id/delete_training_mapping_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Training Mapping"
+            android:layout_marginBottom="16dp"/>
+    <include layout="@layout/logout_button"/>
+
 </LinearLayout>

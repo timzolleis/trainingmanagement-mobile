@@ -6,7 +6,7 @@ import android.widget.Button
 import com.tim.trainingmanagement.R
 import com.tim.trainingmanagement.util.WithSelectorActivity
 
-class Admin : WithSelectorActivity() {
+class AdminActivity : WithSelectorActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,10 +16,10 @@ class Admin : WithSelectorActivity() {
         val createUserButton: Button = findViewById(R.id.create_user_button)
         val editUserButton: Button = findViewById(R.id.edit_user_button)
         val deleteUserButton: Button = findViewById(R.id.delete_user_button)
-        val mapTrainingButton: Button = findViewById(R.id.map_training_button)
-        val showUserTrainingsButton: Button = findViewById(R.id.show_user_trainings_button)
         val showTrainingMappingButton: Button = findViewById(R.id.show_training_mapping_button)
         val addTrainingMappingButton: Button = findViewById(R.id.add_training_mapping_button)
+        val deleteTrainingMappingButton : Button = findViewById(R.id.delete_training_mapping_button)
+        val logoutButton: Button = findViewById(R.id.logout_button)
 
 
         createUserButton.setOnClickListener {
@@ -31,7 +31,7 @@ class Admin : WithSelectorActivity() {
 
         editUserButton.setOnClickListener {
             val intent = Intent(this, UserSelectorActivity::class.java)
-            intent.putExtra("isAdmin", false)
+            intent.putExtra("isAdmin", true)
             editUserLauncher.launch(intent)
         }
 
@@ -41,14 +41,28 @@ class Admin : WithSelectorActivity() {
             deleteUserLauncher.launch(intent)
         }
 
+        val mapTrainingLauncher = getUserNameLauncher(ShowTrainingMappingActivity::class.java)
         showTrainingMappingButton.setOnClickListener {
-            val intent = Intent(this, ShowTrainingMappingActivity::class.java)
+            val intent = Intent(this, UserSelectorActivity::class.java)
+            mapTrainingLauncher.launch(intent)
+        }
+
+        val addTrainingMappingLauncher = getUserNameLauncher(AddTrainingMappingActivity::class.java)
+        addTrainingMappingButton.setOnClickListener {
+            val intent = Intent(this, UserSelectorActivity::class.java)
+            addTrainingMappingLauncher.launch(intent)
+        }
+
+        val removeTrainingMappingLauncher = getUserNameLauncher(DeleteTrainingMappingActivity::class.java)
+        deleteTrainingMappingButton.setOnClickListener {
+            val intent = Intent(this, UserSelectorActivity::class.java)
+            removeTrainingMappingLauncher.launch(intent)
+        }
+
+        logoutButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        addTrainingMappingButton.setOnClickListener {
-            val intent = Intent(this, AddTrainingMappingActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
