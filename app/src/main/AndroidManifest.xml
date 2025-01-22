@@ -24,6 +24,8 @@
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activity.DeleteUserActivity"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.UserSelectorActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
                 android:name=".MainActivity"
                 android:exported="true"

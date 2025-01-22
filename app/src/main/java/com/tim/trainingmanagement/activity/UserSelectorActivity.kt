@@ -1,5 +1,7 @@
 package com.tim.trainingmanagement.activity
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -31,11 +33,22 @@ class UserSelectorActivity : AppCompatActivity() {
 
         confirmButton.setOnClickListener {
             val selectedUser = userSpinner.selectedItem.toString()
-            // Handle user selection
+            val resultIntent = Intent()
+            resultIntent.putExtra("selectedUser", selectedUser)
+            setResult(Activity.RESULT_OK, resultIntent)
+            finish()
         }
 
         cancelButton.setOnClickListener {
+            setResult(Activity.RESULT_CANCELED)
             finish()
+        }
+    }
+
+    companion object {
+        fun startForResult(activity: Activity, requestCode: Int) {
+            val intent = Intent(activity, UserSelectorActivity::class.java)
+            activity.startActivityForResult(intent, requestCode)
         }
     }
 }
