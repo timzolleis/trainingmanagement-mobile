@@ -35,6 +35,9 @@ class UserSelectorActivity : AppCompatActivity() {
             val selectedUser = userSpinner.selectedItem.toString()
             val resultIntent = Intent()
             resultIntent.putExtra("username", selectedUser)
+            intent.extras?.let { resultIntent.putExtras(it) }
+
+
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
