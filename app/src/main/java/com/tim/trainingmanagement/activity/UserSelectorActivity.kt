@@ -34,7 +34,7 @@ class UserSelectorActivity : AppCompatActivity() {
         confirmButton.setOnClickListener {
             val selectedUser = userSpinner.selectedItem.toString()
             val resultIntent = Intent()
-            resultIntent.putExtra("selectedUser", selectedUser)
+            resultIntent.putExtra("username", selectedUser)
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
@@ -42,13 +42,6 @@ class UserSelectorActivity : AppCompatActivity() {
         cancelButton.setOnClickListener {
             setResult(Activity.RESULT_CANCELED)
             finish()
-        }
-    }
-
-    companion object {
-        fun startForResult(activity: Activity, requestCode: Int) {
-            val intent = Intent(activity, UserSelectorActivity::class.java)
-            activity.startActivityForResult(intent, requestCode)
         }
     }
 }
